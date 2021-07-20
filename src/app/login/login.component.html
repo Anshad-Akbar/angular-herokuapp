@@ -1,0 +1,24 @@
+<!-- <p>login works!</p> -->
+<div style="margin-left: 30%; padding: 20px; ">
+    <h1>Login</h1>
+    <p style="color: red;">{{message}}</p><br>
+    <input type="text " placeholder="Username " [(ngModel)]="u_name "><br>
+    <input type="password " placeholder="Password " [(ngModel)]="u_pass "><br>
+    <button (click)="check() ">submit</button>
+</div>
+
+<h1 *ngIf="true"> Demo ngIf</h1>
+<!-- else block -->
+<h1 *ngIf="false; else elseblock"> Demo ngIf test</h1>
+<ng-template #elseblock>
+    <h1>exicute else block</h1>
+</ng-template>
+<br><br>
+<div *ngIf="show; then thenblock; else elseblock">
+</div>
+<ng-template #thenblock>
+    <h1>exicute then block</h1>
+</ng-template>
+<ng-template #elseblock>
+    <h1>exicute else block2</h1>
+</ng-template>

@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<table align="center" width="50%" border="1">
+    <tr>
+        <th>firstname</th>
+        <th>lastname</th>
+        <th>gender</th>
+        <th>dob</th>
+        <th>email</th>
+        <th colspan="2">operations</th>
+    </tr>
+    <tr *ngFor="let asg of data">
+        <td>{{asg['f_name']}}</td>
+        <td>{{asg['l_name']}}</td>
+        <td>{{asg['gender']}}</td>
+        <td>{{asg['dob']}}</td>
+        <td>{{asg['email']}}</td>
+        <td><button type="button" class="btn btn-danger" (click)="delete(asg.id)">Delete</button></td>
+        <td><button type="button" class="btn btn-info" (click)="updateFn(asg,j)">Update</button></td>
+
+    </tr>
+</table>
